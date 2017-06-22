@@ -21,11 +21,11 @@ class BookList extends Component {
       <ul className="list-group col-sm-4">
         {this.renderList()}
       </ul>
-      )
+    )
   }
 }
 
-function mapStateToPros(state) {
+function mapStateToProps(state) {
   return {
     books: state.books
   };
@@ -35,4 +35,4 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({ selectBook: selectBook}, dispatch);
 }
 
-export default connect(mapStateToPros, mapDispatchToProps)(BookList);
+export default connect(mapStateToProps, mapDispatchToProps)(BookList);
